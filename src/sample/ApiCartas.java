@@ -34,6 +34,9 @@ public class ApiCartas {
                 card.setNombre(object.getString("name"));
                 card.setTipo(object.getString("rarity"));
                 String colors = "";
+                if (object.has("text")) {
+                    card.setTexto(object.getString("text"));
+                };
                 try {
                     jsonArray = object.getJSONArray("colors");
                     colors = jsonArray.get(0).toString();

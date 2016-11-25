@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -11,14 +11,17 @@
 
 <GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8.0.112-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
    <children>
-      <Pane prefHeight="504.0" prefWidth="614.0">
+      <Pane prefHeight="504.0" prefWidth="614.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
          <children>
             </children></Pane>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0">
+      <AnchorPane prefHeight="552.0" prefWidth="614.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
          <children>
-                  <ListView fx:id="lvLlistaCartes" layoutX="301.0" prefHeight="510.0" prefWidth="313.0" />
-            <ImageView fx:id="imagen" fitHeight="278.0" fitWidth="189.0" layoutX="57.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
-            <TextField fx:id="Texto" layoutY="318.0" prefHeight="196.0" prefWidth="302.0" />
+                  <ListView fx:id="lvLlistaCartes" layoutX="314.0" prefHeight="586.0" prefWidth="376.0" />
+            <ImageView fx:id="imagen" fitHeight="210.0" fitWidth="183.0" layoutX="57.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+            <TextArea fx:id="color" layoutX="15.0" layoutY="460.0" prefHeight="52.0" prefWidth="280.0" />
+            <TextArea fx:id="rareza" layoutX="15.0" layoutY="520.0" prefHeight="52.0" prefWidth="280.0" />
+            <TextArea fx:id="nombre" layoutX="14.0" layoutY="246.0" prefHeight="35.0" prefWidth="280.0" />
+            <TextArea fx:id="Texto" layoutX="14.0" layoutY="294.0" prefHeight="157.0" prefWidth="280.0" wrapText="true" />
          </children>
       </AnchorPane>
    </children>
@@ -26,7 +29,7 @@
       <ColumnConstraints />
    </columnConstraints>
    <rowConstraints>
-      <RowConstraints />
+      <RowConstraints valignment="TOP" vgrow="ALWAYS" />
       <RowConstraints />
    </rowConstraints>
 </GridPane>

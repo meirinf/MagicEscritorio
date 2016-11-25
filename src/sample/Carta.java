@@ -37,6 +37,10 @@ public class Carta implements Serializable {
         return imagen;
     }
 
+    public String getTexto() {
+        return texto;
+    }
+
     public String getColor() {
         return color;
     }
@@ -64,9 +68,11 @@ public class Carta implements Serializable {
         this.color = color;
     }
 
+    public void setTexto(String texto) {
+        this.texto = texto;
+    }
 
-
-    // ToString
+// ToString
 
     @Override
     public String toString() {
