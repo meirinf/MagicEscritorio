@@ -32,11 +32,13 @@ public class ApiCartas {
                 Carta card = new Carta();
                 object = jsonCartas.getJSONObject(i);
                 card.setNombre(object.getString("name"));
-                card.setTipo(object.getString("rarity"));
                 String colors = "";
                 if (object.has("text")) {
                     card.setTexto(object.getString("text"));
                 };
+                if (object.has("rarity")) {
+                    card.setTipo(object.getString("rarity"));
+                }
                 try {
                     jsonArray = object.getJSONArray("colors");
                     colors = jsonArray.get(0).toString();
