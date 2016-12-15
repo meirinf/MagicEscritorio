@@ -16,10 +16,10 @@ public class Carta implements Serializable {
     String rareza;
 
     public Carta() {
+
     }
 
     // Getters
-
 
     public String getRareza() {
         return rareza;
@@ -46,7 +46,6 @@ public class Carta implements Serializable {
     }
 
     // Setters
-
 
     public void setRareza(String rareza) {
         this.rareza = rareza;
@@ -77,7 +76,5 @@ public class Carta implements Serializable {
     @Override
     public String toString() {
         return "Carta{"+"titulo="+nombre+"}";
-        // ", Tipus=" +  tipo +
-        // ", Image='" + imagen + '\'' + '}';
     }
 }

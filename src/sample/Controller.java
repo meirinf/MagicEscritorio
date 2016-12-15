@@ -1,6 +1,7 @@
 package sample;
 
 
+
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -12,7 +13,6 @@ import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.util.Callback;
-
 import java.util.ArrayList;
 
 public class Controller {
@@ -24,6 +24,9 @@ public class Controller {
     public TextArea nombre;
     public TextArea rareza;
     public TextArea color;
+    public String menRareza;
+    public String menColor;
+
 
     public void initialize() {
 
@@ -68,4 +71,52 @@ public class Controller {
             }
         });
     }
+
+    public void Special(){
+        menRareza = "Special";
+        initialize();
+    }
+    public void Common(){
+        menRareza = "Common";
+        initialize();
+    }
+    public void Rare(){
+        menRareza = "Rare";
+        initialize();
+    }
+    public void Uncommon(){
+        menRareza = "Uncommon";
+        initialize();
+    }
+    public void Mythic_Rare(){
+        menRareza = "Mythic Rare";
+        initialize();
+    }
+    public void Basic_Land(){
+        menRareza = "Basic Land";
+        initialize();
+    }
+
+
+    public void Red(){
+        menColor = "Red";
+        initialize();
+    }
+    public void Black(){
+        menColor = "Black";
+        initialize();
+    }
+    public void White(){
+        menColor = "White";
+        initialize();
+    }
+    public void Blue(){
+        menColor = "Blue";
+        initialize();
+    }
+    public void Green(){
+        menColor = "Green";
+        initialize();
+    }
+
 }
