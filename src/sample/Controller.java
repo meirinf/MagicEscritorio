@@ -77,7 +77,7 @@ public class Controller extends Component {
             imagen.setImage(image);
             nombre.setText(items.get(0).getNombre());
             rareza.setText(items.get(0).getRareza());
-            color.setText(items.get(0).getColor());
+          //  color.setText(items.get(0).getColor());
         }
 
 
