@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextArea?>
@@ -16,23 +18,26 @@
       <Pane prefHeight="504.0" prefWidth="614.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS" />
       <AnchorPane prefHeight="552.0" prefWidth="614.0" GridPane.halignment="CENTER" GridPane.hgrow="ALWAYS" GridPane.valignment="TOP" GridPane.vgrow="ALWAYS">
          <children>
-                  <ListView fx:id="lvLlistaCartes" layoutX="314.0" prefHeight="586.0" prefWidth="376.0" />
+            <ListView fx:id="lvLlistaCartes" layoutX="314.0" prefHeight="586.0" prefWidth="376.0" />
             <ImageView fx:id="imagen" fitHeight="190.0" fitWidth="145.0" layoutX="79.0" layoutY="21.0" pickOnBounds="true" preserveRatio="true" />
-            <TextArea fx:id="color" layoutX="15.0" layoutY="460.0" prefHeight="52.0" prefWidth="280.0" />
+            <TextArea layoutX="15.0" layoutY="460.0" prefHeight="52.0" prefWidth="280.0" />
             <TextArea fx:id="rareza" layoutX="15.0" layoutY="520.0" prefHeight="52.0" prefWidth="280.0" />
             <TextArea fx:id="nombre" layoutX="14.0" layoutY="272.0" prefHeight="35.0" prefWidth="280.0" />
             <TextArea fx:id="Texto" layoutX="14.0" layoutY="324.0" prefHeight="127.0" prefWidth="280.0" wrapText="true" />
-            <MenuButton layoutX="15.0" layoutY="238.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="82.0" text="Color">
-              <items>
-                  <MenuItem mnemonicParsing="false" onAction="#Red" text="RED" />
-                  <MenuItem mnemonicParsing="false" onAction="#Black" text="BLACK" />
-                  <MenuItem mnemonicParsing="false" onAction="#White" text="WHITE" />
-                <MenuItem mnemonicParsing="false" onAction="#Green" text="GREEN" />
-                  <MenuItem mnemonicParsing="false" onAction="#Blue" text="BLUE" />
+            <MenuBar layoutX="14.0" layoutY="237.0" prefHeight="26.0" prefWidth="82.0">
+                <Menu mnemonicParsing="false" text="Color">
+                <items>
+                  <MenuItem fx:id="White" mnemonicParsing="false" onAction="#White" text="White" />
+                  <MenuItem fx:id="Blue" mnemonicParsing="false" onAction="#Blue" text="Blue" />
+                  <MenuItem fx:id="Black" mnemonicParsing="false" onAction="#Black" text="Black" />
+                  <MenuItem fx:id="Red" mnemonicParsing="false" onAction="#Red" text="Red" />
+                  <MenuItem fx:id="Green" mnemonicParsing="false" onAction="#Green" text="Green" />
               </items>
-            </MenuButton>
-            <MenuButton layoutX="104.0" layoutY="238.0" mnemonicParsing="false"  prefHeight="26.0" prefWidth="89.0" text="Rareza">
-              <items>
+                </Menu>
+            </MenuBar>
+            <MenuBar layoutX="107.0" layoutY="237.0" prefHeight="26.0" prefWidth="89.0">
+                <Menu mnemonicParsing="false" text="Rareza">
+                <items>
                   <MenuItem mnemonicParsing="false" onAction="#Special" text="Special" />
                 <MenuItem id="Commom" mnemonicParsing="false" onAction="#Common" text="Common" />
                   <MenuItem id="Uncommom" mnemonicParsing="false" onAction="#Uncommon" text="Uncommon" />
@@ -40,8 +45,9 @@
                   <MenuItem id="Mythic_Rare" mnemonicParsing="false" onAction="#Mythic_Rare" text="Mythic Rare" />
                   <MenuItem id="Basic_land" mnemonicParsing="false" onAction="#Basic_Land" text="Basic Land" />
               </items>
-            </MenuButton>
-            <MenuButton layoutX="201.0" layoutY="238.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="89.0" text="Ayuda" />
+              </Menu>
+            </MenuBar>
+            <MenuButton layoutX="206.0" layoutY="239.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="89.0" text="Ayuda" />
          </children>
       </AnchorPane>
    </children>

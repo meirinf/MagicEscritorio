@@ -13,9 +13,12 @@ import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.util.Callback;
+
+import java.awt.*;
+import java.awt.event.ActionEvent;
 import java.util.ArrayList;
 
-public class Controller {
+public class Controller extends Component {
 
     @FXML
     public ListView<Carta> lvLlistaCartes;
@@ -43,7 +46,11 @@ public class Controller {
                     protected void updateItem(Carta t, boolean bln) {
                         super.updateItem(t, bln);
                         if (t != null) {
-                            setText(t.getNombre());
+                            String titulo="Nombre: "+t.getNombre();
+                            String rareza="rareza: "+t.getRareza();
+                            String color="color: "+t.getColor();
+                            String texto=titulo+"\n"+rareza+"\n"+color;
+                            setText(texto);
                         }
                     }
                 };
@@ -55,6 +62,26 @@ public class Controller {
         ObservableList<Carta> items = FXCollections.observableArrayList(
                 listacartas);
         lvLlistaCartes.setItems(items);
+
+        if (items.size()==0){
+           Texto.setText("Has elejido una opción que no exite");
+            Image image = new Image((getClass().getResourceAsStream("image/no_disponible.png")));
+            imagen.setImage(image);
+            nombre.setText("...");
+            rareza.setText("...");
+            color.setText("...");
+        }
+        else {
+            Texto.setText(items.get(0).getTexto());
+            Image image = new Image(items.get(0).getImagen());
+            imagen.setImage(image);
+            nombre.setText(items.get(0).getNombre());
+            rareza.setText(items.get(0).getRareza());
+            color.setText(items.get(0).getColor());
+        }
+
+
+
 
         lvLlistaCartes.getSelectionModel().selectedItemProperty().addListener(new ChangeListener<Carta>() {
 
@@ -114,9 +141,9 @@ public class Controller {
         menColor = "Blue";
         initialize();
     }
-    public void Green(){
+
+    public void Green() {
         menColor = "Green";
         initialize();
     }
-
 }
